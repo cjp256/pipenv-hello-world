@@ -1,0 +1,17 @@
+name: pipenv-hello-world
+base: core
+summary: hello world
+description: hello world using pipenv
+version: "v0.0"
+confinement: strict
+grade: devel
+
+apps:
+  pipenv-hello-world:
+    command: bin/pipenv-hello-world
+
+parts:
+  pipenv-hello-world:
+    source: .
+    plugin: python
+    process-pipfile-lock: true
